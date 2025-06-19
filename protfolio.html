@@ -1,0 +1,402 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Galiano</title>
+  <link rel="stylesheet" href="" />
+  <script defer src="script.js"></script>
+  <style type="text/css" media="all">
+    /* style.css */
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+
+body { 
+  background-color: #0f0f0f; 
+  color: #ffffff; 
+  line-height: 1.6; 
+  
+}
+
+header.navbar { 
+  background-color: #181818; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px 5%; 
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+  
+}
+
+.navbar .logo { 
+  font-size: 22px; 
+  font-weight: bold; 
+  color: #ff5c00;
+}
+
+.navbar .logo span { 
+  color: white; 
+  
+}
+
+.navbar nav ul { 
+  list-style: none; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 15px; 
+  padding: 10px 0; 
+  
+}
+
+.navbar nav ul li a { 
+  color: #ffffff; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+  font-weight: 500; 
+  font-size: 15px; 
+  
+}
+
+.navbar nav ul li a:hover { 
+  color: #ff5c00; 
+  
+}
+
+.talk-btn { 
+  background-color: #ff5c00; 
+  color: white; 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 30px; 
+  cursor: pointer; 
+  transition: background 0.3s; 
+  font-size: 14px; 
+}
+
+.talk-btn:hover { 
+  background-color: #e04e00; 
+  
+}
+
+.about-section { 
+  padding: 60px 5%; 
+  background-color: #121212; 
+  text-align: center; 
+  
+}
+
+.about-section h1 { 
+  font-size: 30px; 
+  margin-bottom: 30px; 
+  
+}
+
+.about-container { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 20px; }
+.about-container ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.about-container img.profile-pic { 
+  border-radius: 50%; 
+  width: 130px; 
+  height: 130px; 
+  object-fit: cover; 
+  border: 4px solid #ff5c00; 
+  
+}
+
+.about-info { 
+  max-width: 100%; 
+  padding: 0 10px; 
+  
+}
+
+.about-info h2 { 
+  font-size: 20px; 
+  margin-bottom: 10px; 
+  
+}
+
+.about-info ul { 
+  text-align: left; 
+  margin: 20px 0; 
+  list-style: none; 
+  padding: 0; 
+  
+}
+
+.about-info ul li { 
+  margin-bottom: 8px; 
+  font-size: 14px; 
+  
+}
+
+.about-info .btn-group button { 
+  background-color: #ff5c00; 
+  color: white; border: none; 
+  padding: 10px 12px; 
+  margin-right: 10px; 
+  border-radius: 20px; 
+  cursor: pointer; 
+  transition: background 0.3s; 
+  font-size: 13px; 
+  margin-bottom: 10px; 
+  
+}
+
+.about-info .btn-group button:hover { 
+  background-color: #e04e00; 
+  
+}
+
+.skills-section, .services-section, .testimonials-section { 
+  padding: 40px 5%; 
+  background-color: #1c1c1c; 
+  text-align: center; 
+  
+}
+
+.skills-section h2, .services-section h2, .testimonials-section h2 { 
+  font-size: 26px; 
+  margin-bottom: 20px; 
+}
+
+.skills-section h2 span, .services-section h2 span, .testimonials-section h2 span { 
+  color: #ff5c00; 
+  
+}
+
+.skills-grid, .services-grid, .testimonials-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 15px; 
+  margin-top: 30px; }
+
+.skill, .service, .testimonial { 
+  background-color: #2a2a2a; 
+  padding: 15px; 
+  border-radius: 12px; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s; 
+  
+}
+
+.skill:hover, .service:hover, .testimonial:hover { 
+  transform: translateY(-5px); 
+  
+}
+
+.skill span { 
+  display: block; 
+  margin-top: 5px; 
+  color: #ff5c00; 
+  font-weight: bold; 
+  
+}
+
+.service h3 { 
+  font-size: 18px; 
+  margin-bottom: 10px; 
+  color: #ffffff; 
+  
+}
+
+.service p { 
+  color: #cccccc; 
+  font-size: 14px; 
+  
+}
+
+.testimonial p { 
+  font-style: italic; 
+  margin-bottom: 10px; 
+  font-size: 14px; 
+  
+}
+
+.testimonial h4 { 
+  color: #ff5c00; 
+  font-weight: bold; 
+  font-size: 14px; 
+  
+}
+
+.footer { 
+  background-color: #0a0a0a; 
+  padding: 40px 5%; 
+  color: #ccc; 
+  
+}
+
+.footer-content { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px; 
+  
+}
+
+.footer h4, .footer h3 { 
+  color: white; 
+  font-size: 18px; 
+  
+}
+
+.footer ul { 
+  list-style: none; 
+  padding: 0; 
+  
+}
+
+.footer ul li { 
+  margin-bottom: 10px; 
+  font-size: 14px; 
+  
+}
+
+.footer p { 
+  font-size: 13px; 
+  line-height: 1.4; 
+  
+}
+
+
+
+@media (min-width: 768px) { 
+  .about-container { 
+    flex-direction: row; 
+    justify-content: space-between; 
+    text-align: left; 
+    
+  }
+
+.about-info { 
+  padding-left: 40px; 
+  
+}
+
+.footer-content { 
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  
+} 
+  
+}
+
+  </style>
+</head><body>
+  <header class="navbar">
+    <div class="logo">SN <span>Galiano</span></div>
+    <nav>
+      <ul>
+        <li><a href="#">casa</a></li>
+        <li><a href="#services">Serviço</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+    <button class="talk-btn" id="talkBtn">Conversar</button>
+  </header>  <section class="about-section" id="about">
+    <h1>Sobre</h1>
+    <div class="about-container">
+      <img src="24d362602b76ece691b5753e36d98467.jpg" alt="Profile Picture" class="profile-pic" />
+      <div class="about-info">
+        <h2>Crie um site que causará uma impressão rigorosa no seu público!!!</h2>
+        <p>Crie um site que causará uma impressão rigorosa no seu público!!!.</p>
+        <ul>
+          <li><strong>Nome:</strong> Galiano João Francisco </li>
+          <li><strong>Telefone:</strong> (+244) 941-793-530</li>
+          <li><strong>Email:</strong> <a href="mailto:galiano@email.com">galiano@email.com</a></li>
+         <li><strong>GitHub:</strong> <a href       ="https://github.com/galiano" target="_blank">github.com/galiano</a></li>
+        </ul>
+        <div class="btn-group">
+          <button>Contact me</button>
+          <button>Download my resume</button>
+        </div>
+      </div>
+    </div>
+  </section>  <section class="skills-section">
+    <h2>My Work <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill">HTML <span>99%</span></div>
+      <div class="skill">CSS <span>98%</span></div>
+      <div class="skill">JavaScript <span>97%</span></div>
+      <div class="skill">Figma <span>95%</span></div>
+      <div class="skill">Sketch <span>68%</span></div>
+      <div class="skill">Video Editing <span>84%</span></div>
+    </div>
+  </section>  <section class="services-section" id="services">
+    <h2>My <span>Services</span></h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>UI/UX Design</h3>
+        <p>Design moderno e responsivo com foco no usuário.</p>
+      </div>
+      <div class="service">
+        <h3>Web Design</h3>
+        <p>Sites bonitos, funcionais e otimizados.</p>
+      </div>
+      <div class="service">
+        <h3>Web Development</h3>
+        <p>Frontend com HTML, CSS e JavaScript.</p>
+      </div>
+    </div>
+  </section>  <section class="testimonials-section">
+    <h2>What My <span>Clients Say</span></h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p>“Excelente profissional, recomendo muito!”</p>
+        <h4>Robert J. - CEO</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Trabalho criativo, atendeu todas as expectativas.”</p>
+        <h4>Janice Z. - Designer</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Muito responsável e com ótimo resultado final.”</p>
+        <h4>Justin B. - Developer</h4>
+      </div>
+    </div>
+  </section>  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>Galiano</h3>
+        <p>
+🎯 *Desenvolvedor Front-End apaixonado por transformar ideias em interfaces interativas.*  
+💻 Especializado em HTML, CSS, JavaScript e frameworks modernos como React.  
+🚀 Gosto de criar experiências digitais limpas, responsivas e focadas no usuário.  
+🔧 Sempre aprendendo, testando e inovando — porque a web está em constante evolução.  
+🌍 Acredito que um bom design começa no código.
+</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li>Casa</li>
+          <li>serviços</li>
+          <li>Portfólio</li>
+          <li>Sobre</li>
+          <li>Contato</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: galianoamericano@gmail.com</p>
+        <p>Telefone: (+244) 941-793-530</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2025 Galiano. Todos os direitos reservados.</p>
+  </footer>
+</body></html>
